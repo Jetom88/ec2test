@@ -6,7 +6,7 @@ jobs:
   test-job:
     name: test test
 
-    runs-on: "ip-172-31..."
+    runs-on: ["self-hosted", "Linux", "X64"]
 
     steps:
       - name: say hello
