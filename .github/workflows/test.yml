@@ -12,12 +12,9 @@ jobs:
       - name: say hello
         run: echo "제톰이짱"
 
-    - name: action-slack
-      uses: 8398a7/action-slack@v3
-      with:
-        status: ${{ job.status }}
-        author_name: Github Action Test # default: 8398a7@action-slack
-        fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
-      if: always() # Pick up events even if the job fails or is canceled.
+      - name: Notify Slack
+        if: always()
+        uses: ./.github/actions/slack-deploy-notify
+        with:
+          title: "testsetste"
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
