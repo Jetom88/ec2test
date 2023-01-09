@@ -6,8 +6,8 @@ jobs:
   test-job:
     name: test test
 
-    runs-on: ubuntu-latest
+    runs-on: "ip-172-31..."
 
     steps:
       - name: say hello
-        run: echo "hello!!!!111111"
+        run: echo "제톰이짱"
