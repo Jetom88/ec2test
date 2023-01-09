@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3 #branches 기준으로 해당 브랜치에 checkout함
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3 #node가 기본적으로 안깔려있어서 설치해줌
         with:
           node-version: 16
           cache: "npm"

@@ -9,6 +9,9 @@ jobs:
     runs-on: ["self-hosted", "Linux", "X64"]
 
     steps:
+      - name: chekcout
+        uses: actions/checkout@v3
+
       - name: say hello
         run: echo "제톰이짱"
 
